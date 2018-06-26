@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MJIoT_TokenIssuer
+namespace MjIot.Client.TokenApi
 {
     public class TokenRequest
     {

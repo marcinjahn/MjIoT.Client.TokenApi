@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-using MJIoT_EFCoreModel;
+using MjIot.Storage.Models.EFCoreDb;
 
-namespace MJIoT_TokenIssuer.Controllers
+namespace MjIot.Client.TokenApi.Controllers
 {
     [Produces("application/json")]
     [Route("api/Token")]
@@ -54,7 +54,7 @@ namespace MJIoT_TokenIssuer.Controllers
 
         private int? GetUserId(TokenRequest request)
         {
-            MJIoT_EFCoreModel.Models.Users userCheck;
+            MjIot.Storage.Models.EFCoreDb.Models.Users userCheck;
             using (var context = new MJIoTDbContext())
             {
                 userCheck = context.Users

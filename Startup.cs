@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace MJIoT_TokenIssuer
+namespace MjIot.Client.TokenApi
 {
     public class Startup
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
-namespace MJIoT_TokenIssuer
+namespace MjIot.Client.TokenApi
 {
     public interface ICertificateLoader
     {

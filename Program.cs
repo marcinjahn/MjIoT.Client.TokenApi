@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace MJIoT_TokenIssuer
+namespace MjIot.Client.TokenApi
 {
     public class Program
     {
