@@ -10,7 +10,7 @@ using System.IO;
 //using Org.BouncyCastle.OpenSsl;
 using System.Security.Cryptography.X509Certificates;
 
-namespace MjIot.Client.TokenApi
+namespace MjIot.Client.TokenApi.Tools
 {
     public class TokenManager
     {

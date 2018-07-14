@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using MjIot.Client.TokenApi.Tools;
 using MjIot.Storage.Models.EFCoreDb;
 
 namespace MjIot.Client.TokenApi.Controllers
@@ -41,7 +41,7 @@ namespace MjIot.Client.TokenApi.Controllers
                 //    expires: DateTime.Now.AddMinutes(30),
                 //    signingCredentials: creds);
 
-                var manager = new TokenManager();
+                var manager = new Tools.TokenManager();
                 var token = manager.CreateToken(claims);
 
                 return Ok(token);
@@ -58,7 +58,7 @@ namespace MjIot.Client.TokenApi.Controllers
             using (var context = new MJIoTDbContext())
             {
                 userCheck = context.Users
-                    .Where(n => n.Login == request.Username && n.Password == request.Password)
+                    .Where(n => n.Login == request.Username && n.Password == SHA256Hasher.Hash(request.Password))
                     .FirstOrDefault();
             }
 

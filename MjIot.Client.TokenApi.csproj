@@ -6,6 +6,11 @@
 
   <ItemGroup>
     <None Remove="Certificates\mycert.p12" />
+    <None Remove="index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="index.html" />
   </ItemGroup>
 
   <ItemGroup>
