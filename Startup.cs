@@ -35,6 +35,9 @@ namespace MjIot.Client.TokenApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseCors(builder =>
                 builder.AllowAnyOrigin()
                        .AllowAnyHeader()
